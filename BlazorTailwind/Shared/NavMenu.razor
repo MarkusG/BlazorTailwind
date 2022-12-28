@@ -2,13 +2,13 @@
     <h3 class="text-xl p-4 text-center cursor-pointer md:cursor-auto bg-slate-700 md:h-16" @onclick="_ => _collapsed = !_collapsed">Application</h3>
     <div class="p-2 @(_collapsed ? "hidden" : "") md:block">
         <NavLink ActiveClass="active-nav" href="" Match="NavLinkMatch.All">
-            <span class="block p-2 my-2 cursor-pointer hover:bg-slate-500 transition ease-in-out">Home</span>
+            <span class="block p-2 my-2 cursor-pointer hover:bg-slate-500 transition ease-in-out rounded">Home</span>
         </NavLink>
         <NavLink ActiveClass="active-nav" href="one" Match="NavLinkMatch.All">
-            <span class="block p-2 my-2 cursor-pointer hover:bg-slate-500 transition ease-in-out">Page One</span>
+            <span class="block p-2 my-2 cursor-pointer hover:bg-slate-500 transition ease-in-out rounded">Page One</span>
         </NavLink>
         <NavLink ActiveClass="active-nav" href="two" Match="NavLinkMatch.All">
-            <span class="block p-2 my-2 cursor-pointer hover:bg-slate-500 transition ease-in-out">Page Two</span>
+            <span class="block p-2 my-2 cursor-pointer hover:bg-slate-500 transition ease-in-out rounded">Page Two</span>
         </NavLink>
     </div>
 </nav>
