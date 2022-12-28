@@ -1,0 +1,17 @@
+﻿@inherits LayoutComponentBase
+
+<PageTitle>BlazorTailwind</PageTitle>
+
+<div class="md:flex">
+    <div class="md:w-72 sticky top-0">
+        <NavMenu/>
+    </div>
+    <div class="md:grow flex flex-col h-screen">
+        <TopRow/>
+        <div class="bg-slate-200 grow p-2">
+            @Body
+        </div>
+        @* ReSharper disable once Html.TagShouldNotBeSelfClosed *@
+        <Footer/>
+    </div>
+</div>
