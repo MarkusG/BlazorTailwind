@@ -3,20 +3,24 @@
         <h3 class="text-xl">BlazorTailwind</h3>
     </div>
     <div class="p-2 @(_collapsed ? "hidden" : "") md:block">
-        <NavLink ActiveClass="active-nav" href="" Match="NavLinkMatch.All" @onclick="_ => _collapsed = true">
-            <span class="block p-2 my-2 cursor-pointer hover:bg-slate-500 transition ease-in-out rounded">Home</span>
-        </NavLink>
-        <NavLink ActiveClass="active-nav" href="one" Match="NavLinkMatch.All" @onclick="_ => _collapsed = true">
-            <span class="block p-2 my-2 cursor-pointer hover:bg-slate-500 transition ease-in-out rounded">Page One</span>
-        </NavLink>
-        <NavLink ActiveClass="active-nav" href="two" Match="NavLinkMatch.All" @onclick="_ => _collapsed = true">
-            <span class="block p-2 my-2 cursor-pointer hover:bg-slate-500 transition ease-in-out rounded">Page Two</span>
-        </NavLink>
+        @foreach (var (name, url) in _links)
+        {
+            <NavLink ActiveClass="active-nav" href="@url" Match="NavLinkMatch.All" @onclick="_ => _collapsed = true">
+                <span class="block p-2 my-2 cursor-pointer hover:bg-slate-500 transition ease-in-out rounded">@name</span>
+            </NavLink>
+        }
     </div>
 </nav>
 
 @code {
 
     private bool _collapsed = true;
+
+    private readonly (string Name, string Url)[] _links = new[]
+    {
+        ("Home", ""),
+        ("Page One", "one"),
+        ("Page Two", "two"),
+    };
 
 }
