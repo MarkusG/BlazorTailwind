@@ -1,5 +1,7 @@
 <nav class="text-slate-100 bg-slate-600 sticky top-0 md:h-screen">
-    <h3 class="text-xl p-4 text-center cursor-pointer md:cursor-auto bg-slate-700 md:h-16" @onclick="_ => _collapsed = !_collapsed">Application</h3>
+    <div class="p-4 text-center cursor-pointer md:cursor-auto bg-slate-700 md:h-14" @onclick="_ => _collapsed = !_collapsed">
+        <h3 class="text-xl">Application</h3>
+    </div>
     <div class="p-2 @(_collapsed ? "hidden" : "") md:block">
         <NavLink ActiveClass="active-nav" href="" Match="NavLinkMatch.All">
             <span class="block p-2 my-2 cursor-pointer hover:bg-slate-500 transition ease-in-out rounded">Home</span>
